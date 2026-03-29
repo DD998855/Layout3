@@ -1,0 +1,411 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brown-dark: #6C3B22;
+  --brown-mid: #862C24;
+  --brown-soft: #644E40;
+  --brown-light: #c08d82;
+  --body-left-line: 34px;
+}
+
+/* =========================
+   Main white board
+   Size and position unchanged
+========================= */
+#container {
+  width: 800px;
+  height: 800px;
+  margin: 100px auto 25px auto;
+  padding: 24px 34px 24px 34px;
+  background-color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 96px 356px 246px;
+  grid-template-rows: 108px 156px 72px 154px 194px 56px;
+
+  column-gap: 0;
+  row-gap: 0;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   Top left group
+========================= */
+.top-left-group {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-top: 14px;
+  padding-left: 8px;
+  padding-bottom: 4px;
+  min-height: 100%;
+}
+
+.top-left-number {
+  margin: 0;
+  font-family: 'Rye', serif;
+  font-size: 46px;
+  line-height: 0.88;
+  color: var(--brown-dark);
+}
+
+.top-left-text {
+  margin: 0;
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 12.2px;
+  line-height: 1.3;
+  color: #3E2B24;
+  text-align: left;
+}
+
+.top-left-text div {
+  margin: 0;
+}
+
+/* =========================
+   Top right section
+========================= */
+.top-right-section {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 176px 176px 1fr;
+  column-gap: 12px;
+  align-items: start;
+
+  padding-top: 20px;
+  padding-left: 18px;
+}
+
+.top-calories-group,
+.top-nutrition-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.calories-label,
+.nutrition-title {
+  margin: 0;
+  font-family: 'IM FELL English SC', serif;
+  font-size: 15.5px;
+  line-height: 1.04;
+  font-weight: bold;
+  color: var(--brown-mid);
+}
+
+.calories-desc {
+  margin: 0;
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 11px;
+  line-height: 1.28;
+  color: #3E2B24;
+}
+
+.top-calories-group .calories-desc:first-of-type {
+  margin-top: 4px;
+}
+
+/* =========================
+   Left support module
+========================= */
+.left-support {
+  grid-column: 1 / 2;
+  grid-row: 2 / 6;
+
+  position: relative;
+  align-self: stretch;
+}
+
+.left-weight {
+  position: absolute;
+  top: 144px;
+  left: 18px;
+  margin: 0;
+  font-family: 'IM FELL English SC', serif;
+  font-size: 13.8px;
+  line-height: 1;
+  color: var(--brown-mid);
+  z-index: 2;
+}
+
+.left-brand {
+  position: absolute;
+  top: 250px;
+  left: 16px;
+  margin: 0;
+  font-family: 'Ruthie', cursive;
+  font-size: 33px;
+  line-height: 1;
+  color: var(--brown-light);
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  white-space: nowrap;
+}
+
+/* =========================
+   Center title
+========================= */
+.center-title {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  position: relative;
+  width: 356px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Rye', serif;
+  font-size: 69px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--brown-dark);
+
+  align-self: start;
+  margin-top: -12px;
+}
+
+.center-title div {
+  position: absolute;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.title-line-1 {
+  left: 12px;
+  top: 0;
+}
+
+.title-line-2 {
+  left: 108px;
+  top: 62px;
+}
+
+/* =========================
+   Slogan
+========================= */
+.center-slogan {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: calc(var(--body-left-line) + 8px);
+  margin-top: -16px;
+
+  font-family: 'IM FELL English SC', serif;
+  font-size: 12.4px;
+  line-height: 1.48;
+  color: var(--brown-soft);
+  text-align: left;
+}
+
+.center-slogan div {
+  margin: 0;
+}
+
+/* =========================
+   Ingredients EN
+========================= */
+.ingredients-left {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: calc(var(--body-left-line) + 8px);
+  margin-top: -20px;
+}
+
+.ingredients-title {
+  margin: 0 0 8px 0;
+  font-family: 'IM FELL English SC', serif;
+  font-size: 16px;
+  line-height: 1.05;
+  font-weight: bold;
+  color: var(--brown-mid);
+}
+
+.ingredients-text,
+.nutrition-legal {
+  margin: 0;
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 11.2px;
+  line-height: 1.66;
+  color: #3E2B24;
+  text-align: left;
+}
+
+/* =========================
+   Ingredients FR + legal
+========================= */
+.ingredients-left-fr {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: calc(var(--body-left-line) + 8px);
+  margin-top: -40px;
+}
+
+.ingredients-left-fr .nutrition-legal {
+  margin-top: 6px;
+  line-height: 1.48;
+}
+
+/* =========================
+   Nutrition table
+========================= */
+.nutrition-table {
+  grid-column: 3 / 4;
+  grid-row: 2 / 6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  width: 100%;
+  padding-top: 16px;
+  padding-left: 38px;
+  margin-top: -25px;
+  
+}
+
+.nutrition-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nutrition-group-top {
+  margin-bottom: 34px;
+}
+
+.nutrition-row {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  column-gap: 10px;
+  align-items: baseline;
+}
+
+.nutrition-value,
+.nutrition-label {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 11.15px;
+  line-height: 1.16;
+  color: #3E2B24;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* =========================
+   Footer row
+========================= */
+.footer-row {
+  grid-column: 1 / -1;
+  grid-row: 6 / 7;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  align-items: end;
+
+  width: 100%;
+  margin-top: -25px;
+
+  transform: translateY(-25px);
+
+}
+
+.footer-left,
+.footer-tagline-block,
+.footer-center,
+.footer-right {
+  margin: 0;
+  padding: 0;
+  align-self: end;
+  color: var(--brown-soft);
+}
+
+.footer-left {
+  justify-self: start;
+  text-align: left;
+}
+
+.footer-tagline-block {
+  justify-self: start;
+  text-align: left;
+}
+
+.footer-center {
+  justify-self: center;
+  text-align: left;
+}
+
+.footer-right {
+  justify-self: end;
+  text-align: left;
+}
+
+.footer-title {
+  margin: 0;
+  font-family: 'IM FELL English SC', serif;
+  font-size: 9.5px;
+  line-height: 1.12;
+  color: var(--brown-soft);
+  white-space: nowrap;
+}
+
+.footer-link,
+.footer-tagline {
+  margin: 0;
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 9.15px;
+  line-height: 1.12;
+  color: var(--brown-soft);
+  white-space: nowrap;
+}
+
+/* =========================
+   Bottom course info outside white board
+========================= */
+#info {
+  width: 800px;
+  margin: 0 auto 100px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #555;
+}
